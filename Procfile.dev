@@ -1,0 +1,2 @@
+server: bin/rails server -p 3000
+web: yarn _dev

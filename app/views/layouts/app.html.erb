@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Line</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+  <body>
+    <main>
+      <%= yield %>
+      <% if Rails.env.development? %>
+        <script defer src="http://localhost:3036/app.js"></script>
+      <% else %>
+        <%= javascript_include_tag "app" %>
+        <%= stylesheet_link_tag "app" %>
+      <% end %>
+    </main>
+  </body>
+</html>
